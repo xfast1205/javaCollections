@@ -11,5 +11,6 @@ public class TestStack {
         System.out.println(stack.readTop());
         stack.pop();
         System.out.println(stack.readTop());
+        stack.isFull();
     }
 }
