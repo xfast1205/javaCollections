@@ -5,10 +5,19 @@
  */
 package com.mybank.data;
 
+import com.mybank.domain.SavingsAccount;
+import com.mybank.domain.Bank;
+import com.mybank.domain.Customer;
+import com.mybank.domain.CheckingAccount;
 import com.mybank.domain.javaBank.*;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ *
+ * @author Taurus
+ */
 public class DataSource {
 
     private File dataFile;
@@ -18,27 +27,20 @@ public class DataSource {
     }
 
     public void loadData() throws IOException {
-
-        Bank bank = Bank.getBank();
-
         Scanner input = new Scanner(dataFile);
+        Bank bank = Bank.getBank();
 
         Customer customer;
 
-        int numofCustomers = input.nextInt();
-
-        for (int i = 0;
-                i < numofCustomers;
-                i++) {
+        int numOfCustomers = input.nextInt();
+        for (int i = 0; i < numOfCustomers; i++) {
             String firstName = input.next();
             String lastName = input.next();
-
             bank.addCustomer(new Customer(firstName, lastName));
             customer = bank.getCustomer(i);
 
-            int numofAccounts = input.nextInt();
-
-            while (numofAccounts-- > 0) {
+            int numOfAccounts = input.nextInt();
+            while (numOfAccounts-- > 0) {
                 char accountType = input.next().charAt(0);
                 switch (accountType) {
                     case 'S': {
@@ -49,13 +51,16 @@ public class DataSource {
                     }
                     case 'C': {
                         float initBalance = input.nextFloat();
-                        float overdraftAmmount = input.nextFloat();
-                        customer.addAccount(new CheckingAccount(initBalance, overdraftAmmount));
+                        float overdraftAmount = input.nextFloat();
+                        customer.addAccount(new CheckingAccount(initBalance, overdraftAmount));
                         break;
+
                     }
                 }
             }
         }
+        
+        
     }
 
 }
