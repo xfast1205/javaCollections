@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mybank.chat;
+package chat;
 
 import java.awt.*;
 import javax.swing.*;
@@ -16,6 +11,7 @@ public class ChatClient {
     private JButton quitButton;
 
     public ChatClient() {
+
         this.output = new JTextArea(10,50);
         this.input = new JTextField(50);
         this.sendButton = new JButton("Send");
@@ -23,6 +19,7 @@ public class ChatClient {
     }
     
     public void launchFrame() {
+
         JFrame frame = new JFrame("Bank Chat Room");
         frame.setLayout(new BorderLayout());
         
@@ -38,8 +35,6 @@ public class ChatClient {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-        
-        
     }
     
     public static void main(String[] args) {

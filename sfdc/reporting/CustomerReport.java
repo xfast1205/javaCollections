@@ -1,11 +1,7 @@
-package com.mybank.reporting;
+package reporting;
 
-import com.mybank.domain.SavingsAccount;
-import com.mybank.domain.Account;
-import com.mybank.domain.Bank;
-import com.mybank.domain.Customer;
-import com.mybank.domain.CheckingAccount;
-import com.mybank.domain.javaBank.*;
+import domain.*;
+
 import java.text.DecimalFormat;
 
 public class CustomerReport {

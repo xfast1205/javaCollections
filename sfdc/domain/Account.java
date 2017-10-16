@@ -1,9 +1,4 @@
-package com.mybank.domain;
-
-/**
- * Class Account
- * @author Andrew Ryzhkov
- */
+package domain;
 
 public class Account {
     
@@ -12,11 +7,8 @@ public class Account {
     public Account() {
 
         balance = 0;
-
     }
 
-    
-    
     /**
      * Constructor (initial balance)
      * @param initBalance (positive)
@@ -41,7 +33,6 @@ public class Account {
 
     /**
      * Method to add money
-     * @param amount money
      * @return balance if true
      */
     boolean deposit(double amt) {
@@ -56,7 +47,6 @@ public class Account {
 
     /**
      * Method to withdraw money
-     * @param amount money
      * @return balance if true
      */
     

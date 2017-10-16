@@ -1,4 +1,4 @@
-package com.mybank.domain;
+package domain;
 
 public class CheckingAccount extends Account {
     
@@ -9,15 +9,11 @@ public class CheckingAccount extends Account {
         balance = initBalance;
     }
 
-
-    
     public CheckingAccount(double initBalance){
         balance = initBalance;
         this.overdraftAmount = 0;
     }
-    
 
-    
     @Override
     public boolean withdraw(double amt) throws OverdraftException {
         if (amt <= balance + overdraftAmount) {

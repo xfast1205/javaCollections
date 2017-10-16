@@ -1,7 +1,6 @@
-package com.mybank.domain;
+package domain;
+
 import java.util.ArrayList;
-
-
 
 public class Bank {
 

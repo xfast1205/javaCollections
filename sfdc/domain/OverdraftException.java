@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mybank.domain;
+package domain;
 
 public class OverdraftException extends Exception {
     
@@ -17,6 +12,4 @@ public class OverdraftException extends Exception {
         super(message);
         this.deficit = deficit;
     }
-    
-    
 }
