@@ -1,5 +1,5 @@
-package data;
-import domain.*;
+package com.myBank.data;
+import com.myBank.domain.*;
 
 import java.io.File;
 import java.io.IOException;

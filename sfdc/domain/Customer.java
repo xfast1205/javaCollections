@@ -1,4 +1,4 @@
-package domain;
+package com.myBank.domain;
 
 import java.util.*;
 

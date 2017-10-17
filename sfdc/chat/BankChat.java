@@ -1,4 +1,4 @@
-package chat;
+package com.myBank.chat;
 
 public class BankChat extends javax.swing.JFrame {
 

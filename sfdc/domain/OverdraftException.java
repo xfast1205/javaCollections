@@ -1,4 +1,4 @@
-package domain;
+package com.myBank.domain;
 
 public class OverdraftException extends Exception {
     

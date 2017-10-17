@@ -1,4 +1,4 @@
-package ATM;
+package com.mybank.ATM;
 
 public class myBankATM extends javax.swing.JFrame {
 

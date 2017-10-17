@@ -1,6 +1,6 @@
-package reporting;
+package com.myBank.reporting;
 
-import domain.*;
+import com.myBank.domain.*;
 
 import java.text.DecimalFormat;
 
