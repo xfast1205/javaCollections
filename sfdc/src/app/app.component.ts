@@ -13,7 +13,7 @@ import { jsforce } from 'jsforce';
 export class AppComponent {
   private baseUrl = 'https://api.status.salesforce.com/v1/';
   private sfdcProduct = 'Service_Cloud' + '/';
-  private products = [];
+  public products = [];
   private pollInterval = 2 * 60 * 10;
 
   constructor(private httpClient: HttpClient) {
