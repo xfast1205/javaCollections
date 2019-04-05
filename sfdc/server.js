@@ -1,13 +1,6 @@
 //Install express server
 const express = require('express');
 const path = require('path');
-const jsforce = require('jsforce');
-const username = 'andrey.ryzhkov@ringcentral.com.box16';
-const password = 'Lifeisgame{}1';
-const securityToken = 'aE6iC5Yf1qmzPrYpyDtKXrmN';
-const conn = new jsforce.Connection({
-    loginUrl: "https://rc--box16.cs63.my.salesforce.com"
-});
 
 const app = express();
 

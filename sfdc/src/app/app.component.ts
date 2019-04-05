@@ -20,7 +20,6 @@ export class AppComponent {
     private pollInterval = 2 * 60 * 10;
 
     constructor(private httpClient: HttpClient) {
-        this.loginSfdc();
         this.httpClient.get(this.baseUrl + 'products' + '/' + this.sfdcProduct).subscribe((res: any[]) => {
             this.products = res['Instances'].slice(0, 10);
         });
@@ -37,9 +36,6 @@ export class AppComponent {
             console.log(data);
             this.products = data['Instances'].slice(0, 10);
         });
-    }
-
-    loginSfdc() {
     }
 
     refreshPoll() {
