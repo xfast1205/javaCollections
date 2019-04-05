@@ -20,9 +20,9 @@ export class AppComponent {
     private pollInterval = 2 * 60 * 10;
 
     constructor(private httpClient: HttpClient) {
-        this.httpClient.get(this.baseUrl + 'products' + '/' + this.sfdcProduct).subscribe((res: any[]) => {
-            this.products = res['Instances'].slice(0, 10);
-        });
+        // this.httpClient.get(this.baseUrl + 'products' + '/' + this.sfdcProduct).subscribe((res: any[]) => {
+        //     this.products = res['Instances'].slice(0, 10);
+        // });
     }
 
     pollStatus() {
