@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="text-center">
+    <img width="500" alt="SFDC Logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/83/Salesforce_logo.svg/1200px-Salesforce_logo.svg.png">
+</div>
+<div class="text-center" style="padding-top: 3%">
+    <button class="btn btn-primary" style="padding-right: 1%" (click)="pollStatus()">Poll SFDC</button>
+</div>
+<div class="text-center" style="padding-top: 3%; padding: 1%">
+    <button class="btn btn-danger" style="padding: 1%" (click)="refreshPoll()">Cancel Poll</button>
+</div>
+<div *ngIf="products.length">
+    <ul class="list-group" style="padding-top: 3%">
+        <li class="list-group-item" *ngFor="let product of products" >
+            key: {{product.key}}<br/>
+            location: {{product.location}}<br/>
+            environment: {{product.environment}}<br/>
+            release: {{product.releaseVersion}}<br/>
+            status: {{product.status}}
+        </li>
+    </ul>   
+</div>
+<router-outlet></router-outlet>
